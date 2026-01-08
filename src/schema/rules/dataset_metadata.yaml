@@ -10,6 +10,7 @@ dataset_description:
     Authors:
       level: optional
       level_addendum: recommended if no CITATION.cff file is present
+    Keywords: optional
     Acknowledgements: optional
     HowToAcknowledge: optional
     Funding: optional
@@ -35,7 +36,7 @@ dataset_authors:
 
 derivative_description:
   selectors:
-    - path == "/dataset_description.json"
+    - match(path, ".*dataset_description.json$")
     - json.DatasetType == "derivative"
   fields:
     GeneratedBy: required
